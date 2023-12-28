@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio y Pago</title>
+    <link  rel="stylesheet" href="/CSS/envio_pago.css">
+    <link  rel="stylesheet" href="/Plugins/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="/Plugins/css/all.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+  </head>
+      
+  <body>
+
+<!--Header-->
+<header id="topbar" class="d-flex align-items-center  p-2">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><span>contact@example.com</span></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAThJREFUSEu1lYsNwjAMRK+TAJMAkwCTAJMAkwCTwCjoqjhyUztxJBoJNaWJ3/kTZ8DCY1jYPiKAHYAtAD75+wJ4pec7zV2dNcAawC0ZrTlK4D4BZ+s8wBnApSN8hNwBXMs9FiBqnEbppR4UNYGUAG74VJTTKA1QrQwtiN9POi8l4NmI+caIdekxIVw3Dg04pqR6DlA11cmgtwdVXXofk85KmwBasdfxbYnJa7UHLElu9AbVS+xbYqieXkw8YHLLqtCwHkDOg/bAAkwS5rjmFcZoWwOshRGAJSwXhAZYcZU2QDGc6wqSuXVuTAAbGb34R5JzvnoOWjTJuYLKHPC91iqigHzILAD/82o8Amg2O4m/BWkB9Pecx54LxwPMOqiuksiVKU1NX49sKSsAD+8mE0gEUKnc9qfFAT+PHlEZAq/iHAAAAABJRU5ErkJggg=="/></a>
+        <a href="#" class="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQ5JREFUSEvlldENwjAMRK+bwCTAJMAkwCTAJLAJbAJ6VYyS1EmTj35hCVFI4rPvLu6ghWNYOL/+F2Ar6SRpFSi+SbqE3/vwPC7lFD0kHSW9K9ocJF2ddc4AyHkAXYBPSG4VeTjsKQUgT0n38J10APorOnkOG+NuStXHgDtLXqIIfi1IzoeKjAKPHttP51D0i1wDKozF670mVYCcot7k7E8EbqGoF2SdOzCniC6wqvm7F2AyGbxRgchcFvToiQk9HkX812LFHBiHQc8kSsMOJ3EPWiPxfs2m8Ro6QNUckEuNJfI6MIHpYk6HYuUeQI+DmDdzQ3HE8GyKizbBqrFd40FWm7aJbv/7Rmu17/Iv/S/ZejIZnal+BAAAAABJRU5ErkJggg=="/></a>
+        <a href="#" class="instagram"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWlJREFUSEvFlU1KA0EQhb+sXbvXvShewJ9jCIHoVlDwBOoNFHWtgYB7L5B4A/EC6sqFexdulCdVw1DpHtsOIQUh9MxUvffqr3vM2Xpzjs/CAFaAAbBjv5zQV3sxAc4BPzffpxTsA7cVqVPwOwPKAoj5S0VwdxHIASBFvxYViLkU/Md2gW3gzJykQiBJALGXipTJUQzfLKCI6LxqpDytYi/QJMB3InJb9rK9/zAiYzu3STloMYDYfAF9Yy4Sj8AIeM/UrEl9rEFU4Pm8AQ6DumvgCJAKtXPbigFUrAdjvBaCPAMbwGmrwFOp/0uBOuPKWK4HgCdgc1YA74hL4DgAXAAnNpSxtYtT5B30CewBWwaiIt8DS6YuNl8xgBynptOiqbDepsUAqY5wEKXLl1nXEuwctJpVEdl3ropZl53ANJjZZacPate1fDU3UtBY7kaTEg2Q/uOUxpT4PTAsvXAS+67+0cLu5HrKwfMHAP9OGc0LliMAAAAASUVORK5CYII="/></a>
+        <a href="#" class="linkedin"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANlJREFUSEvtleENAiEMRr/bRDfRTXQS3UQ30U10E81LqKncIUkb7pdNyOUC7aNfC0wabNPg+FodcJO0S2b1lLS1GHUGr2TwWdxfgLskdnMIQD9xW4CrpGMJHJGtC2D3+wK4BLLoApDGJDqPkAgAA9uUAdD++doa5uvO62bga2ASmZMFMyCwkySfaQqwpBhZPNxEGmCdRaeRLea7LQVAIoJhrXZOATh41KUG+Hb+A/IS2UlGZ4pKG1q3+IO1tA6fbg0Ct8OXSxMQudjqzfiLcv0nMyvNzH/4o/8GBFZMGUrnwJIAAAAASUVORK5CYII="/></a>
+      </div>
+      <div class="dropdown text-end">
+        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="/img/persona.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="/Pages/mi_perfil_clienVen_editarPerfil.html">Perfil</a></li>
+          <li><a class="dropdown-item" href="/Pages/login.html">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<!--Navbar-->
+<nav class="navbar p-4">
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="/img/logos/logo.png" width="25%"></a>
+      <form class="d-flex col-4" id="form-search" role="search">
+        <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" id="btn-search" type="submit">
+          <a href="/Pages/busqueda_Productos.html" style="text-decoration-line: none; color: white;">Search</a>
+        </button>
+       </form>
+      <a href="/Pages/carrito_com_ven.html">
+        <button class="btn btn-outline-success" type="submit" id="cart">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO5JREFUSEvNlFsSwUAQRU92wk7YCb8sAovgl52wE3ZCXZVOTZJ5tESU/p2Ze/r2YyomjmpifX4KeNZuHsAFOHzDXejAAKa7BG5jIbESrYBzLS7IqIgBZsC9Vh3tItVkOZCToaE+zvU4BQhdDIEUARK9AgtgXU+VB2TO9zaFuT2wZjfZOAg2iSqP3mUX7dNmW0LaIbl+R2mTd4Dsth4lnERLWgKYC0+ZrDwtzRIgbHbTuIiDpFMPQJMk+57oLaYHIGHLMAfRv9X7WrwAT/bRO17AEdgAJ2DbUcqdFcfUtMKvvJtU7swNmNzB5D34X8ALuNkyGZ2TYY0AAAAASUVORK5CYII="/>
+        </button>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg p-5" id="nav2">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link " aria-current="page" href="/Pages/inicio_com_ven.html" id="componente1">Inicio</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="componente2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mis Ventas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  href="/Pages/mi_perfil_clienVen_misVentasCD.html">Consulta detallada</a></li>
+                  <li><a class="dropdown-item" href="/Pages/mi_perfil_clienVen_misVentasCA.html">Consulta Agrupada</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="componente3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/Pages/agregar_produc_com_ven.html">Agregar Producto</a></li>
+                    <li><a class="dropdown-item" href="/Pages/agregar_categorias_comven.html">Agregar Categoría</a></li>
+                  <li><a class="dropdown-item" href="/Pages/mi_perfil_clienVen_misProductos.html">Mis Productos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="componente6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Listas de Deseos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  href="/Pages/agregar_listas_comven.html">Crear lista</a></li>
+                  <li><a class="dropdown-item" href="/Pages/listas_publicas_com_ven.html">Listas Públicas</a></li>
+                </ul>
+              </li>
+              <a class="nav-link " href="/Pages/mi_perfil_clienVen_misCompras.html" id="componente2">Mis Compras</a>
+              <a class="nav-link " href="/Pages/acercade_comven.html" id="componente5">Acerca de</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+        <section class="align-items-center" style="background-color: #f2f1eb; ">
+
+
+          <div class="container-fluid" id="main">
+
+            <!--CARD 1-->
+            <div class="card    shadow-2-strong card-registration" id="profiletop">
+              
+              <div class="card-body    container-fluid">
+                
+                <div id="profilenav">
+                  <ul class="align-items-center justify-content-center container-fluid">
+                    <li><a href="/Pages/pago_com_ven.html"> <img src="/img/address.png" style="max-width:28%;" > Dirección</a> </li>
+                    <li><a href="/Pages/pago_envio_pago_comven.html"> <img src="/img/enviopago.jpg" style="max-width:25%;"> Envio y Pago</a> </li>
+                    <li><a href="/Pages/finalizar_compra_comven.html"> <img src="/img/pago.png" style="max-width:28%;"> Finalizar Compra</a> </li> 
+                  </ul>
+               </div> 
+                  
+              </div> 
+           </div>
+           <!--CARD 1-->
+
+
+
+           <!--CARD 2-->
+            <div class="card " id="profileContent">
+
+              <div class="card-header    " id="profileContent_header">
+
+                <div class="row m-3" > 
+                  <div class="col">
+                      <h1 id="titulo_profileContent" >Envío y Pago
+                      </h1>
+                  </div> 
+ 
+                </div>
+
+              </div>
+
+              <div class="card-body    container-fluid table-responsive" id="profileContent_body">
+                
+               <div class="row row-cols-1">
+                <hr />
+                <h5>Tarjeta de crédito o débito</h5>
+                <img src="/img/tarjetas.png" style="width:35%;" id="img_tarjetas">
+                <p>Caravaggio Studio acepta las principales tarjetas de crédito y débito.</p>
+                <button class="col-3 btn btn-outline-primary btn-block" id="btn_agregar_id" data-bs-toggle="modal" data-bs-target="#TarjetaModal" >Agregar Tarjeta</button>
+               <p></p>
+                <p></p>
+                <hr />
+            </div>
+
+            <div class="row row-cols-1">
+                <hr />
+                <h5>Tarjeta de Regalo</h5>
+                <img src="/img/logos/icono_logo.png" style="width:11%;" id="img_regalo">
+                <a onclick="tarjeta()">Ingresa una tarjeta de regalo de Caravaggio Studio.</a>
+                <br></br>
+                <div id="input_num_regalo" class="col-2">
+                </div>
+                <br></br>
+                <br></br>
+                <hr />
+            </div>
+
+            <div class="row row-cols-1">
+                <hr />
+                <h5>PayPal</h5>
+                <img src="/img/paypal.png" style="width:25%;" id="img_paypal">
+                <p>Caravaggio Studio acepta el pago mediante PayPal para facilitar el pago correspondiente.</p>
+                <button class="col-3 btn btn-outline-primary btn-block" id="btn_paypal_id" >Pagar con PayPal</button>
+               <p></p>
+               <p></p>
+                <hr />
+            </div>
+
+            <div class="d-grid gap-2 col-2 mx-auto">
+              <a href="/Pages/finalizar_compra.html">
+            <button type="submit" class="btn btn-outline-primary" id="continuar_button_id" name="continuar_button_name">
+                Continuar
+               </button>
+            </a>
+              </div>
+              </div>
+              
+            </div>
+              
+          </div>
+          
+        </section>
+
+        <!--Modales-->
+        <div class="modal fade" id="TarjetaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background:#dadada">
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar una tarjeta de débito o crédito</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="agregar_tarjeta_form_id">
+                    <div>
+                        <img src="/img/tarjetas.png" style="width:50%">
+                    </div>
+                    <div class="mb-3">
+                      <label for="num_tarjeta_id" class="col-form-label">Número de tarjeta</label>
+                      <input type="text" class="form-control" id="num_tarjeta_id" name="num_tarjeta_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre_tarjeta_id" class="col-form-label">Nombre en la tarjeta</label>
+                        <input type="text" class="form-control" id="nombre_tarjeta_id" name="nombre_tarjeta_name">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="feha_vencimiento_tarjeta_id" class="col-form-label">Fecha de vencimiento</label>
+                       <input type="date" class="form-control" id="feha_vencimiento_tarjeta_id" name="feha_vencimiento_tarjeta_name">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="cvv_tarjeta_id" class="col-form-label">Código de seguridad (CVV)</label>
+                        <input type="text" class="form-control" id="cvv_tarjeta_id" name="cvv_tarjeta_name">
+                      </div>
+
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" style="background:#106973;border:none">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div>
+
+            <!--Footer-->
+            <footer>
+              <ul class="nav justify-content-center pb-3 mb-3">
+                <li class="nav-item"><a href="/Pages/inicio_com_ven.html" class="nav-link px-2 text-muted">Inicio</a></li>
+                <li class="nav-item"><a href="/Pages/mi_perfil_clienVen_misProductos.html" class="nav-link px-2 text-muted">Mis Productos</a></li>
+                <li class="nav-item"><a href="/Pages/mi_perfil_clienVen_misCompras.html" class="nav-link px-2 text-muted">Mis Compras</a></li>
+                <li class="nav-item"><a href="/Pages/mi_perfil_clienVen_editarPerfil.html" class="nav-link px-2 text-muted">Mi cuenta</a></li>
+                <li class="nav-item"><a href="/Pages/acercade_comven.html" class="nav-link px-2 text-muted">Acerca de</a></li>
+              </ul>
+              <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+            </footer>
+              
+              <script src="/Plugins/js/jquery-3.6.1.min.js"></script>
+              <script src="/Plugins/js/jqueryvalidate.min.js"></script>
+              <script src="/Plugins/js/additional-methods.js"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+            <script src="/Plugins/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+            <script type="text/javascript" src ="/JS/envio.js"></script>
+        
+          
+  </body>
+
+</html>

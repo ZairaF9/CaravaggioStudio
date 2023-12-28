@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Métodos de Pago</title>
+         <link  rel="stylesheet" href="/CSS/agregarlistas.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+         <link href="/Plugins/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        </head>
+
+    <body>
+        <header id="topbar" class="d-flex align-items-center  p-2">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+              <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope d-flex align-items-center"><span>contact@example.com</span></i>
+                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+              </div>
+              <div class="social-links d-none d-md-flex align-items-center">
+                <a href="#" class="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAThJREFUSEu1lYsNwjAMRK+TAJMAkwCTAJMAkwCTwCjoqjhyUztxJBoJNaWJ3/kTZ8DCY1jYPiKAHYAtAD75+wJ4pec7zV2dNcAawC0ZrTlK4D4BZ+s8wBnApSN8hNwBXMs9FiBqnEbppR4UNYGUAG74VJTTKA1QrQwtiN9POi8l4NmI+caIdekxIVw3Dg04pqR6DlA11cmgtwdVXXofk85KmwBasdfxbYnJa7UHLElu9AbVS+xbYqieXkw8YHLLqtCwHkDOg/bAAkwS5rjmFcZoWwOshRGAJSwXhAZYcZU2QDGc6wqSuXVuTAAbGb34R5JzvnoOWjTJuYLKHPC91iqigHzILAD/82o8Amg2O4m/BWkB9Pecx54LxwPMOqiuksiVKU1NX49sKSsAD+8mE0gEUKnc9qfFAT+PHlEZAq/iHAAAAABJRU5ErkJggg=="/></a>
+                <a href="#" class="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQ5JREFUSEvlldENwjAMRK+bwCTAJMAkwCTAJLAJbAJ6VYyS1EmTj35hCVFI4rPvLu6ghWNYOL/+F2Ar6SRpFSi+SbqE3/vwPC7lFD0kHSW9K9ocJF2ddc4AyHkAXYBPSG4VeTjsKQUgT0n38J10APorOnkOG+NuStXHgDtLXqIIfi1IzoeKjAKPHttP51D0i1wDKozF670mVYCcot7k7E8EbqGoF2SdOzCniC6wqvm7F2AyGbxRgchcFvToiQk9HkX812LFHBiHQc8kSsMOJ3EPWiPxfs2m8Ro6QNUckEuNJfI6MIHpYk6HYuUeQI+DmDdzQ3HE8GyKizbBqrFd40FWm7aJbv/7Rmu17/Iv/S/ZejIZnal+BAAAAABJRU5ErkJggg=="/></a>
+                <a href="#" class="instagram"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWlJREFUSEvFlU1KA0EQhb+sXbvXvShewJ9jCIHoVlDwBOoNFHWtgYB7L5B4A/EC6sqFexdulCdVw1DpHtsOIQUh9MxUvffqr3vM2Xpzjs/CAFaAAbBjv5zQV3sxAc4BPzffpxTsA7cVqVPwOwPKAoj5S0VwdxHIASBFvxYViLkU/Md2gW3gzJykQiBJALGXipTJUQzfLKCI6LxqpDytYi/QJMB3InJb9rK9/zAiYzu3STloMYDYfAF9Yy4Sj8AIeM/UrEl9rEFU4Pm8AQ6DumvgCJAKtXPbigFUrAdjvBaCPAMbwGmrwFOp/0uBOuPKWK4HgCdgc1YA74hL4DgAXAAnNpSxtYtT5B30CewBWwaiIt8DS6YuNl8xgBynptOiqbDepsUAqY5wEKXLl1nXEuwctJpVEdl3ropZl53ANJjZZacPate1fDU3UtBY7kaTEg2Q/uOUxpT4PTAsvXAS+67+0cLu5HrKwfMHAP9OGc0LliMAAAAASUVORK5CYII="/></a>
+                <a href="#" class="linkedin"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANlJREFUSEvtleENAiEMRr/bRDfRTXQS3UQ30U10E81LqKncIUkb7pdNyOUC7aNfC0wabNPg+FodcJO0S2b1lLS1GHUGr2TwWdxfgLskdnMIQD9xW4CrpGMJHJGtC2D3+wK4BLLoApDGJDqPkAgAA9uUAdD++doa5uvO62bga2ASmZMFMyCwkySfaQqwpBhZPNxEGmCdRaeRLea7LQVAIoJhrXZOATh41KUG+Hb+A/IS2UlGZ4pKG1q3+IO1tA6fbg0Ct8OXSxMQudjqzfiLcv0nMyvNzH/4o/8GBFZMGUrnwJIAAAAASUVORK5CYII="/></a>
+              </div>
+              <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="/img/persona.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item" href="/Pages/mi_perfil_spAdmin_editarPerfil.html">Perfil</a></li>
+                  <li><a class="dropdown-item" href="/Pages/login.html">Cerrar Sesión</a></li>
+                </ul>
+              </div>
+            </div>
+        </header>
+       
+            <nav class="navbar p-4">
+                <div class="container-fluid">
+                 <a class="navbar-brand" href="#"><img src="/img/logos/logo.png" width="25%"></a>
+                </div>
+              </nav>
+
+              <nav class="navbar navbar-expand-lg p-4" id="nav2">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                          <a class="nav-link " aria-current="page" href="/Pages/iniciosuperadmin.html" id="componente1">Inicio</a>
+                      <a class="nav-link " href="/Pages/registroadmin.html" id="componente2">Registrar Administradores</a>
+                      <a class="nav-link " aria-current="page" href="/Pages/agregar_metodos_pago.html" id="componente3">Métodos de Pago</a>
+                      <a class="nav-link " href="/Pages/acercasuper.html"  id="componente5">Acerca de</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+             
+              <!--Section-->
+
+              <section class="d-flex   align-items-center" style="background-color: #f2f1eb; ">
+                <div class="container-fluid" id="main">
+    
+                  <div class="card     shadow-2-strong card-registration" style="border-radius: 15px;">
+            
+                    <div class="card-header   col-auto text-center mt-5" style="background-color: white; border-bottom: white;">
+                      <div class="col-auto text-center" >
+                        <img src="/img/metodos_pago.png" width="25%" class="rounded mx-auto d-block mb-3" alt="">
+                      </div>
+                      <h1>Métodos de Pago</h1>
+                   </div>
+              
+                    <div class="card-body     container-fluid">
+    
+                      <form class="container-fluid" id="agregarmetodo_form">
+    
+                        <div class="container-fluid">
+                          
+                          <div class="form-group mb-3">
+                            <label class="label" for="metodopago_select_id">Tipo de Pago</label>
+              
+                            <select class="form-select form-select"  onchange="mostrar();" aria-label="form-select-sm example" id="metodospagos_select_id" name="metodospago_select_name" required>
+                              <option value="0" selected>Selecciona el tipo de pago</option>
+                              <option value="Tarjeta">Tarjeta</option>
+                              <option value="Paypal">Paypal</option>
+                              <option value="Tarjeta de regalo">Tarjeta de regalo</option>
+                              <option value="Tarjeta tienda">Tarjeta tienda</option>
+                              <option value="Sandbox">Sandbox</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group mb-3" id="nombre_tarjeta_id">
+                           
+                          </div>
+              
+                          <div class=" form-group mb-3">
+                            <label class="label" for="imagen_input_id">Agregar imagen</label>
+                            <input class="form-control" type="file" id="imagenpago_input_id" name="imagenpago_input_name" accept="image/png, image/jpeg">
+                          </div>
+
+                          <div class="d-grid gap-2 col-6 mx-auto">
+                            <button onclick="enviar()" type="submit" class="btn btn-outline-primary" id="crearLista_button_id" name="crearLista_button_name">
+                              Agregar
+                            </button>
+                          </div>
+                        
+              
+                      </form>
+          
+                      
+                    </div>
+              
+                    </div>
+                  </div>
+                </div>
+                
+            
+              </section>   
+    
+<br><br><br><br>
+
+              <footer>
+                <ul class="nav justify-content-center pb-3 mb-3">
+                  <li class="nav-item"><a href="/Pages/iniciosuperadmin.html" class="nav-link px-2 text-muted">Inicio</a></li>
+                  <li class="nav-item"><a href="/Pages/registroadmin.html" class="nav-link px-2 text-muted">Registrar Administradores</a></li>
+                  <li class="nav-item"><a href="/Pages/mi_perfil_spAdmin_editarPerfil.html" class="nav-link px-2 text-muted">Mi cuenta</a></li>
+                  <li class="nav-item"><a href="/Pages/agregar_metodos_pago.html" class="nav-link px-2 text-muted">Métodos de Pago</a></li>
+                  <li class="nav-item"><a href="/Pages/acercasuper.html" class="nav-link px-2 text-muted">Acerca de</a></li>
+                </ul>
+                <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+              </footer>
+        
+              <script src="/Plugins/js/jquery-3.6.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+            <script src="/Plugins/js/bootstrap.min.js" crossorigin="anonymous"></script>
+            <script type="text/javascript" src ="/JS/metodos_pago.js"></script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+/*Header and Navbar*/
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+header{
+    background: #F2CF8D;
+}
+
+.navbar{
+    background: #C99B6A;
+}
+
+#nav2{
+    background: #ff9393;
+}
+
+#btn-search,#cart{
+    color:#fff;
+    background: #106973;
+    border:none;
+}
+
+#cart img{
+    filter:invert(1);
+}
+
+#cart:hover,#btn-search:hover{
+    background: rgb(19, 179, 152);
+}
+
+#cart:hover img{
+    transform: scale(1.2);
+}
+
+body{
+    background: #F2F1EB !important;
+}
+
+#componente1:hover{
+    color:#fff;
+background: rgb(19, 179, 152);
+}
+
+#componente2:hover{
+    color:#fff;
+    background: rgb(19, 179, 152);
+    }
+
+    #componente3:hover{
+        color:#fff;
+        background: rgb(19, 179, 152);
+        }
+
+        #componente4:hover{
+            color:#fff;
+            background: rgb(19, 179, 152);
+            }
+
+            #componente5:hover{
+                color:#fff;
+                background: rgb(19, 179, 152);
+                }
+
+                #componente6:hover{
+                    color:#fff;
+                    background: rgb(19, 179, 152);
+                    }
+
+                    #componente7:hover{
+                        color:#fff;
+                        background: rgb(19, 179, 152);
+                        }
+
+            .dropdown-menu a{
+                transition: .5s all ease-in-out;
+            }
+            
+            .dropdown-menu a:hover{
+                box-shadow: 0 0 10px rgb(109, 224, 205);
+                transition: .5s all ease-in-out;
+                margin-left: 18px;
+                border-radius: 0 50px 50px 0;
+                background: rgb(19, 179, 152);
+                color:#fff
+}
+
+/*Footer*/
+footer{
+    background: #ff9393;
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a,li{
+    color:#fff;
+}
+
+/*Section*/
+.nosotros{
+    padding-bottom: 75px;
+    padding-top: 75px;
+}
+
+@media (max-width:767px){
+    .nosotros img{
+        width:500px;
+    }
+}
+
+.fondo{
+    background: url(/img/acerca4.jpg);
+    background-size: cover;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fondo h1{
+    text-align: center;
+    position: relative;
+    color:#F2F1EB;
+    top: 45%;
+}
+
+.fondo:hover{
+    background: #F2BBBB;
+}
