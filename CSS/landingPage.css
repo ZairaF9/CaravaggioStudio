@@ -1,0 +1,256 @@
+.btn-outline-light {
+    --bs-btn-color: #ffffff; /*letra*/
+    --bs-btn-border-color: #d7d7d7;
+    border-width: 0.1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.775rem;
+
+    margin-right: 2%;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f2cf8d44;
+    --bs-btn-hover-border-color: #f2cf8d;
+    --bs-btn-focus-shadow-rgb: 13,110,253;
+    --bs-btn-active-color: rgb(222, 46, 46);
+    --bs-btn-active-bg: #947350;
+    --bs-btn-active-border-color: #947350;
+    
+    --bs-btn-active-shadow: #f2cf8d;
+    --bs-btn-disabled-color: #cdfd0d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #fdf10d;
+    --bs-gradient: none;
+}
+
+#botones_navbar, #botones_navbar:visited{
+    font-family: 'Poppins', sans-serif!important;
+    font-weight: 600!important;
+    font-size: large;
+    color: #F2F1EB!important;
+}
+
+
+
+.navbar-landingPage a:hover{
+    color: #ff9393!important;
+}
+
+
+/*-----------------------------------------------------*/
+html{
+    min-height: 100%;
+    position: relative;
+}
+header{
+    background: #F2CF8D;
+}
+
+.navbar{
+    background: #C99B6A;
+}
+
+#nav2{
+    background: #ff9393;
+}
+
+#btn-search,#cart{
+    color:#fff;
+    background: #106973;
+    border:none;
+}
+
+#cart img{
+    filter:invert(1);
+}
+
+#cart:hover,#btn-search:hover{
+    background: rgb(19, 179, 152);
+}
+
+#cart:hover img{
+    transform: scale(1.2);
+}
+
+body{
+    background: #F2F1EB !important;
+}
+
+.heart-icon{
+    cursor:pointer;
+    border:none;
+    background: transparent;
+}
+
+.heart-icon:hover{
+color:#ff9393
+}
+
+.cart-icon{
+    cursor:pointer;
+    border:none;
+    background: transparent;
+}
+
+.cart-icon:hover{
+   color:#ff9393;
+}
+
+#slide1 img{
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 640px;
+}
+
+#slide2 img{
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 640px;
+}
+
+#slide3 img{
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 640px;
+}
+
+#slide4 img{
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 640px;
+}
+
+#componente0:hover{
+    color:#fff;
+background: rgb(19, 179, 152);
+}
+
+#componente1:hover{
+    color:#fff;
+background: rgb(19, 179, 152);
+}
+
+#componente2:hover{
+    color:#fff;
+    background: rgb(19, 179, 152);
+    }
+
+    #componente3:hover{
+        color:#fff;
+        background: rgb(19, 179, 152);
+        }
+
+        #componente4:hover{
+            color:#fff;
+            background: rgb(19, 179, 152);
+            }
+
+            #componente5:hover{
+                color:#fff;
+                background: rgb(19, 179, 152);
+                }
+
+                #componente6:hover{
+                    color:#fff;
+                    background: rgb(19, 179, 152);
+                    }
+
+                    #componente7:hover{
+                        color:#fff;
+                        background: rgb(19, 179, 152);
+                        }
+
+            .dropdown-menu a{
+                transition: .5s all ease-in-out;
+            }
+            
+            .dropdown-menu a:hover{
+                box-shadow: 0 0 10px rgb(109, 224, 205);
+                transition: .5s all ease-in-out;
+                margin-left: 18px;
+                border-radius: 0 50px 50px 0;
+                background: rgb(19, 179, 152);
+                color:#fff
+}
+
+.product-item{
+    border: 1px solid rgb(219, 219, 219);
+    background: #fff;
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img{
+    position: relative;
+    overflow: hidden;
+}
+
+.btns{
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    font-size: 15px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+}
+.btns button{
+    border: none;
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.btns button:hover{
+    color: #fcb941;
+}
+
+.product-img:hover .btns{
+    bottom: 0;
+}
+
+.heart-icon{
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    font-size: 18px;
+}
+
+.cart-icon{
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 18px;
+}
+
+.product-type{
+    font-size: 13px;
+    opacity: 0.8;
+}
+.product-name{
+    transition: all 0.3s ease-in-out;
+}
+.product-name:hover{
+    color: #fcb941!important;
+}
+.product-price{
+    color: #fcb941;
+}
+.rating{
+    font-size: 13px;
+}
+.product-item{
+    width: 300px;
+}
+
+footer{
+    background: #ff9393;
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a,li{
+    color:#fff;
+}
